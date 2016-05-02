@@ -1,0 +1,202 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Sports UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1><a href="index.html">Solid State</a></h1>
+						<nav>
+							<% if (!user) { %>
+							<a href="#menu">Login</a>
+								<a href="/signup">Signup</a>
+								<% } else { %>
+									<a href="/logout">Welcome, <%= user.username %></a>
+									<% } %>
+						</nav>
+					</header>
+
+				<!-- Login -->
+				<% if (!user) { %>
+					<nav id="menu">
+						<div class="inner">
+							<h2>Please Login</h2>
+							<form method="post" action="/login">
+								<div class="row uniform">
+									<div class="6u 12u$(xsmall)">
+										<label for="demo-name">Username</label>
+										<input type="text" name="username" id="demo-name" value="" />
+									</div>
+									<div class="6u$ 12u$(xsmall)">
+										<label for="demo-email">Password</label>
+										<input type="password" name="password" id="demo-email" value="" />
+									</div>
+									<div class="12u$">
+										<ul class="actions">
+											<li><input type="submit" value="Login" class="special" /></li>
+										</ul>
+									</div>
+								</form>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+					<nav id="menu">
+						<div class="inner">
+							<h2>Please Signup</h2>
+							<form method="post" action="/signup">
+								<div class="row uniform">
+									<div class="6u 12u$(xsmall)">
+										<label for="demo-name">Username</label>
+										<input type="text" name="username" id="demo-name" value="" />
+									</div>
+									<div class="6u$ 12u$(xsmall)">
+										<label for="demo-email">Password</label>
+										<input type="password" name="password" id="demo-email" value="" />
+									</div>
+									<div class="12u$">
+										<ul class="actions">
+											<li><input type="submit" value="Signup" class="special" /></li>
+										</ul>
+									</div>
+								</form>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+					<% } else { %>
+						<nav id="menu">
+							<div class="inner">
+								<h2>Welcome, <%= user.username %></h2>
+							</div>
+						</nav>
+						<% } %>
+									<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<div class="logo"><span class="icon fa-diamond"></span></div>
+							<h2>Sports UP</h2>
+							<p>Book your Favourite Sports Car with ease</p>
+						</div>
+					</section>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+
+						<!-- One -->
+							<section id="one" class="wrapper spotlight style1">
+								<div class="inner">
+									<a href="#" class="image"><img src="images/pic01.png" alt="" /></a>
+									<div class="content">
+										<h2 class="major">Ford Mustang GT</h2>
+										<p>The Ford Mustang is an American automobile manufactured by Ford. It was originally based on the platform of the second generation North American Ford Falcon, a compact car. The original 1962 Ford Mustang I two-seater concept car had evolved into the 1963 Mustang II four-seater concept car which Ford used to pretest how the public would take interest in the first production Mustang. The 1963 Mustang II concept car was designed with a variation of the production model's front and rear ends with a roof that was 2.7 inches shorter. Introduced early on April 17, 1964, and thus dubbed as a "1964½" by Mustang fans, the 1965 Mustang was the automaker's most successful launch since the Model A. The Mustang has undergone several transformations to its current sixth generation.</p>
+										<% if (!user) { %>
+											<% } else { %>
+										<a href="/book" class="special">Book Now</a>
+											<% } %>
+									</div>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two" class="wrapper alt spotlight style2">
+								<div class="inner">
+									<a href="#" class="image"><img src="images/pic02.png" alt="" /></a>
+									<div class="content">
+										<h2 class="major">Dodge Challenger</h2>
+										<p>The Dodge Challenger is the name of three different generations of American automobiles produced by Dodge. The Dodge Silver Challenger was produced from 1958 to 1959. From 1969 to 1974, the first generation Dodge Challenger pony car was built using the Chrysler E platform, sharing major components with the Plymouth Barracuda. The second generation, from 1978 to 1983, was a badge engineered Mitsubishi Galant Lambda. The third, and current generation, was introduced in early 2008 as a rival to the evolved fifth generation Ford Mustang and the fifth generation Chevrolet Camaro.</p>
+										<% if (!user) { %>
+											<% } else { %>
+										<a href="#" class="special">Book Now</a>
+											<% } %>
+									</div>
+								</div>
+							</section>
+
+						<!-- Three -->
+							<section id="three" class="wrapper spotlight style3">
+								<div class="inner">
+									<a href="#" class="image"><img src="images/pic03.png" alt="" /></a>
+									<div class="content">
+										<h2 class="major">Chevrolet Camaro</h2>
+										<p>The Chevrolet Camaro is an automobile manufactured by Chevrolet, classified as a pony car and some versions also as a muscle car. It went on sale on September 29, 1966, for the 1967 model year and was designed as a competing model to the Ford Mustang. The car shared its platform and major components with the Pontiac Firebird, also introduced for 1967.
+
+Four distinct generations of the Camaro were developed before production ended in 2002. The nameplate was revived on a concept car that evolved into the fifth-generation Camaro; production started on March 16, 2009.</p>
+                    <% if (!user) { %>
+											<% } else { %>
+										<a href="#" class="special">Book Now</a>
+											<% } %>
+									</div>
+								</div>
+							</section>
+
+
+
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							<p>Feel free to send me a message</p>
+							<form method="post" action="#">
+								<div class="field">
+									<label for="name">Name</label>
+									<input type="text" name="name" id="name" />
+								</div>
+								<div class="field">
+									<label for="email">Email</label>
+									<input type="email" name="email" id="email" />
+								</div>
+								<div class="field">
+									<label for="message">Message</label>
+									<textarea name="message" id="message" rows="4"></textarea>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+							<ul class="contact">
+								<li class="fa-home">
+									Sports UP Inc.<br />
+									2008 N. Deerpark Dr. Apt #335<br />
+									Fullerton, CA 92831-1553
+								</li>
+								<li class="fa-phone">(714) 657-8039</li>
+								<li class="fa-envelope"><a href="#">kuldeeprakibe@hotmail.com</a></li>
+								<li class="fa-twitter"><a href="#">twitter.com/harshal.rio91</a></li>
+								<li class="fa-facebook"><a href="#">facebook.com/harshal.rio91</a></li>
+								<li class="fa-instagram"><a href="#">instagram.com/harshal.rio91</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Sports UP Inc. All rights reserved.</li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
